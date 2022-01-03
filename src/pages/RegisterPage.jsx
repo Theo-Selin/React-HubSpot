@@ -43,7 +43,8 @@ export default function RegisterPage() {
             body: JSON.stringify(payload)
         })
         .then(res => res.json())
-        .then(data => setResponse(data))
+        .then(data => 
+            setResponse(data))
     }
 
     return (
@@ -72,7 +73,7 @@ export default function RegisterPage() {
                             your organisations information.
                         </h1>
                     </div>
-                    <Image src="./images/illustration-your-users.svg" alt="" />
+                    <Image src="./images/illustration-your-users.svg" alt="image of an illustration" />
                 </Flex>
             </Container>
         </StyledForm>

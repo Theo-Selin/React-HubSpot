@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import { useContext } from 'react/cjs/react.development'
 import styled from 'styled-components'
+import { CustomerContext } from '../App'
 import CreateCustomerForm from './CreateCustomerForm'
 
 const StyledInfo = styled.div`
@@ -13,10 +15,10 @@ const StyledInfo = styled.div`
 `
 
 export default function MyInfo() {
-    const [myData, setMyData] = useState(null)
     const [email, setEmail] = useState("")
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
+    const {myData, setMyData} = useContext(CustomerContext)
 
     useEffect(() => {
         const url = "https://frebi.willandskill.eu/api/v1/me"

@@ -14,6 +14,8 @@ export const CustomerContext = createContext({})
 
 function App() {
   const [customerData, setCustomerData] = useState(null)
+  const [myData, setMyData] = useState(null)
+  console.log(myData)
 
   useEffect(() => {
     fetchData()
@@ -32,7 +34,7 @@ function App() {
       .then((data) => setCustomerData(data.results))
   }
   return (
-    <CustomerContext.Provider value={{ customerData, setCustomerData, fetchData }}>
+    <CustomerContext.Provider value={{ customerData, setCustomerData, fetchData, myData, setMyData }}>
       <GlobalStyles />
       <NavBar />
       <div className="App">
