@@ -1,13 +1,15 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, createContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CustomerContext } from '../App'
 import MyButton from './MyButton'
 
+export const userContext = createContext({})
 
 export default function Login() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const { fetchData } = useContext(CustomerContext)
+    const [user, setUser] = useState({})
     const navigate = useNavigate()
 
     function handleOnSubmit(e) {
@@ -17,6 +19,7 @@ export default function Login() {
             email,
             password
         }
+        setUser(payload)
         fetch(url, {
             method: "POST",
             headers: {
