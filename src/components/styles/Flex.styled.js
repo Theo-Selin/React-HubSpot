@@ -4,8 +4,7 @@ export const Flex = styled.div`
     display: flex;
     align-items: center;
 
-    & > div,
-    & > ul {
+    & > div {
         flex: 1;
     }
 

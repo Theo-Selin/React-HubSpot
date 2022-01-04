@@ -34,7 +34,7 @@ export default function StartPage() {
                         <MyButton big bgColor="#ee7b5b" color="white">
                             <Link style={linkStyle} to="/register">Get started for free</Link></MyButton>
                     </div>
-                    <Image src="./images/illustration-mockups.svg" alt="" />
+                    <Image src="./images/illustration-mockups.svg" alt="image of an illustration" />
                 </Flex>
             </Container>
         </StyledBody>
